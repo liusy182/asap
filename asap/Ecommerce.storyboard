@@ -31,8 +31,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7bE-cB-Ebp">
                                             <rect key="frame" x="2" y="5" width="196" height="193"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DescriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij8-Jx-Qkl">
-                                                    <rect key="frame" x="34" y="0.0" width="130" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="descriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij8-Jx-Qkl">
+                                                    <rect key="frame" x="35" y="0.0" width="128" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="PEz-4M-9zL"/>
                                                     </constraints>
@@ -49,7 +49,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLw-nG-E7N">
                                                     <rect key="frame" x="5" y="172" width="186" height="21"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="ModelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-mg-TU5">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="modelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-mg-TU5">
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="Spp-wc-em6"/>
@@ -58,7 +58,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PriceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOX-Be-Y3b">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOX-Be-Y3b">
                                                             <rect key="frame" x="89" y="0.0" width="97" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -81,6 +81,12 @@
                                     <constraint firstItem="7bE-cB-Ebp" firstAttribute="leading" secondItem="nGP-7p-KRj" secondAttribute="leading" constant="2" id="df6-ZB-Efh"/>
                                     <constraint firstAttribute="bottom" secondItem="7bE-cB-Ebp" secondAttribute="bottom" constant="2" id="jxr-k0-dUl"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Ij8-Jx-Qkl" id="LvL-Pg-kKI"/>
+                                    <outlet property="imageView" destination="nxy-Om-SWn" id="TsH-uW-4Xt"/>
+                                    <outlet property="modelLabel" destination="IO0-mg-TU5" id="mcv-KK-hBI"/>
+                                    <outlet property="priceLabel" destination="dOX-Be-Y3b" id="13X-VL-YiQ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
