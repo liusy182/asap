@@ -7,6 +7,16 @@
 //
 
 import UIKit
+import LatoFont
+
+extension String {
+    func isValidEmail() -> Bool {
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(self)
+    }
+}
 
 class RegisterViewController: UIViewController {
 
@@ -24,6 +34,36 @@ class RegisterViewController: UIViewController {
     static func instantiate() -> RegisterViewController {
         return UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController() as! RegisterViewController
     }
+    
+    @IBOutlet var okButton: UIButton! {
+        didSet {
+            okButton.enabled = false
+            okButton.titleLabel?.font = UIFont.latoFontOfSize(18)
+        }
+    }
+    
+    @IBOutlet var emailTextField: UITextField! {
+        didSet {
+            emailTextField.becomeFirstResponder()
+            emailTextField.font = UIFont.latoFontOfSize(18)
+        }
+    }
+    @IBAction func emailTextFieldChanged(sender: UITextField) {
+        guard let text = sender.text else {
+            return
+        }
+        okButton.enabled = text.isValidEmail()
+    }
+    
+    @IBAction func signinTapped(sender: UIButton) {
+        guard let text = emailTextField.text else {
+            return
+        }
+        AppDelegate.appdelegate().userStore.setUserEmail(text)
+        
+        performSegueWithIdentifier("ShowEcommerceScene", sender: self)
+    }
+
     
 
     /*

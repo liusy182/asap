@@ -16,12 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="xXH-6F-jBQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-NN-sxr">
+                                <rect key="frame" x="200" y="215" width="200" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ5-wC-8rO">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-Ku-nsX">
+                                        <rect key="frame" x="0.0" y="60" width="200" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="emailTextFieldChanged:" destination="h0S-fe-F3U" eventType="editingDidEnd" id="g1q-ia-VMC"/>
+                                            <action selector="emailTextFieldChanged:" destination="h0S-fe-F3U" eventType="editingChanged" id="nRC-cy-cnB"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-9r-B4O">
+                                        <rect key="frame" x="0.0" y="120" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="9vc-Ze-26E"/>
+                                            <constraint firstAttribute="height" constant="50" id="YUJ-ih-p17"/>
+                                        </constraints>
+                                        <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="signinTapped:" destination="h0S-fe-F3U" eventType="touchUpInside" id="NZo-ZI-2Aa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tQ5-wC-8rO" firstAttribute="leading" secondItem="vDL-NN-sxr" secondAttribute="leading" id="ECs-pe-8qn"/>
+                                    <constraint firstAttribute="trailing" secondItem="tQ5-wC-8rO" secondAttribute="trailing" id="Mow-pd-6vA"/>
+                                    <constraint firstItem="bkQ-Ku-nsX" firstAttribute="leading" secondItem="vDL-NN-sxr" secondAttribute="leading" id="eIZ-Od-XUn"/>
+                                    <constraint firstAttribute="trailing" secondItem="bkQ-Ku-nsX" secondAttribute="trailing" id="l8S-Ic-kkn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vDL-NN-sxr" firstAttribute="centerX" secondItem="xXH-6F-jBQ" secondAttribute="centerX" id="I5t-PQ-Saf"/>
+                            <constraint firstItem="vDL-NN-sxr" firstAttribute="centerY" secondItem="xXH-6F-jBQ" secondAttribute="centerY" id="oDh-Fd-4IJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="bkQ-Ku-nsX" id="Cyy-VH-wHY"/>
+                        <outlet property="okButton" destination="sMh-9r-B4O" id="Utf-on-uAN"/>
+                        <segue destination="qj4-7K-8x4" kind="show" identifier="ShowEcommerceScene" id="GJM-EV-Jd3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAs-my-KUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="331" y="303"/>
+        </scene>
+        <!--Ecommerce-->
+        <scene sceneID="bjC-02-ZWg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Ecommerce" storyboardName="Ecommerce" id="qj4-7K-8x4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zik-Fi-wk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767.5" y="303"/>
         </scene>
     </scenes>
 </document>
