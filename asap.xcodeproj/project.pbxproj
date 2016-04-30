@@ -11,6 +11,8 @@
 		430CD68F1CD4B6420038136D /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CD68E1CD4B6420038136D /* UserStore.swift */; };
 		4335FE801CD4B7FF0077E5D8 /* EcommerceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335FE7F1CD4B7FF0077E5D8 /* EcommerceViewController.swift */; };
 		4335FE821CD4B80C0077E5D8 /* Ecommerce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4335FE811CD4B80C0077E5D8 /* Ecommerce.storyboard */; };
+		4335FE841CD4F6060077E5D8 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335FE831CD4F6060077E5D8 /* ProductCollectionViewCell.swift */; };
+		4335FE861CD4F8A40077E5D8 /* TwoColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4335FE851CD4F8A40077E5D8 /* TwoColumnFlowLayout.swift */; };
 		43F659551CD4A49A00618C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F659541CD4A49A00618C0D /* AppDelegate.swift */; };
 		43F659571CD4A49A00618C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F659561CD4A49A00618C0D /* ViewController.swift */; };
 		43F6595A1CD4A49A00618C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F659581CD4A49A00618C0D /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		430CD68E1CD4B6420038136D /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		4335FE7F1CD4B7FF0077E5D8 /* EcommerceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceViewController.swift; sourceTree = "<group>"; };
 		4335FE811CD4B80C0077E5D8 /* Ecommerce.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ecommerce.storyboard; sourceTree = "<group>"; };
+		4335FE831CD4F6060077E5D8 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		4335FE851CD4F8A40077E5D8 /* TwoColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColumnFlowLayout.swift; sourceTree = "<group>"; };
 		43F659511CD4A49A00618C0D /* asap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F659541CD4A49A00618C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43F659561CD4A49A00618C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			children = (
 				4335FE811CD4B80C0077E5D8 /* Ecommerce.storyboard */,
 				4335FE7F1CD4B7FF0077E5D8 /* EcommerceViewController.swift */,
+				4335FE831CD4F6060077E5D8 /* ProductCollectionViewCell.swift */,
+				4335FE851CD4F8A40077E5D8 /* TwoColumnFlowLayout.swift */,
 			);
 			name = Ecommerce;
 			sourceTree = "<group>";
@@ -246,8 +252,10 @@
 			files = (
 				4335FE801CD4B7FF0077E5D8 /* EcommerceViewController.swift in Sources */,
 				43F659691CD4A5D600618C0D /* RegisterViewController.swift in Sources */,
+				4335FE861CD4F8A40077E5D8 /* TwoColumnFlowLayout.swift in Sources */,
 				43F659571CD4A49A00618C0D /* ViewController.swift in Sources */,
 				430CD68F1CD4B6420038136D /* UserStore.swift in Sources */,
+				4335FE841CD4F6060077E5D8 /* ProductCollectionViewCell.swift in Sources */,
 				43F659551CD4A49A00618C0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
