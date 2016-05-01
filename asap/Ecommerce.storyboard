@@ -91,10 +91,21 @@
                         </cells>
                     </collectionView>
                     <navigationItem key="navigationItem" id="SWn-SI-0WR"/>
+                    <connections>
+                        <segue destination="zyO-Y6-bac" kind="show" identifier="showCheckoutScene" id="X7n-hd-H0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfF-TJ-fZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912" y="206"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="y6n-sx-6r8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Checkout" id="zyO-Y6-bac" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdH-od-GdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368.5" y="206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XsW-38-sZQ">

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gDF-md-qAW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Checkout View Controller-->
+        <scene sceneID="6d9-K3-iua">
+            <objects>
+                <viewController id="gDF-md-qAW" customClass="CheckoutViewController" customModule="asap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jF3-PD-epZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="brP-8Y-xR0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hrb-6X-Aov">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uzo-zN-P24">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-2W-EQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="dnW-WF-iAh" style="IBUITableViewCellStyleDefault" id="fwQ-3W-494">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwQ-3W-494" id="MVx-1N-apl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dnW-WF-iAh">
+                                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcr-M1-dN9">
+                                        <rect key="frame" x="0.0" y="520" width="600" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5CF-hK-xKJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Buy"/>
+                                        <connections>
+                                            <action selector="buyTapped" destination="gDF-md-qAW" eventType="touchUpInside" id="8YT-Wx-Gk5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jcr-M1-dN9" firstAttribute="width" secondItem="mXk-2W-EQD" secondAttribute="width" id="01l-5y-dW9"/>
+                                    <constraint firstItem="jcr-M1-dN9" firstAttribute="leading" secondItem="uzo-zN-P24" secondAttribute="leading" id="Psx-0r-HXC"/>
+                                    <constraint firstAttribute="trailing" secondItem="jcr-M1-dN9" secondAttribute="trailing" id="a28-bx-uU6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="brP-8Y-xR0" firstAttribute="top" secondItem="uzo-zN-P24" secondAttribute="bottom" id="33Z-j7-zhG"/>
+                            <constraint firstItem="uzo-zN-P24" firstAttribute="leading" secondItem="Hrb-6X-Aov" secondAttribute="leading" id="Mqx-Sn-Wrs"/>
+                            <constraint firstAttribute="trailing" secondItem="uzo-zN-P24" secondAttribute="trailing" id="maG-3B-zfg"/>
+                            <constraint firstItem="uzo-zN-P24" firstAttribute="top" secondItem="jF3-PD-epZ" secondAttribute="bottom" id="o5a-Gg-dAg"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="buyButton" destination="jcr-M1-dN9" id="sxV-bK-yK3"/>
+                        <outlet property="tableView" destination="mXk-2W-EQD" id="l8i-px-P9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKT-gy-74K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="349"/>
+        </scene>
+    </scenes>
+</document>
